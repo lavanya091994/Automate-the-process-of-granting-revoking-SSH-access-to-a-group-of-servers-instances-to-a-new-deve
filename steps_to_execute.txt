@@ -1,0 +1,28 @@
+STEPS:
+Master: 
+1.generate a user which is common in both master & slave .. Example: ansible_admin
+2.Give user"ansible_admin"root previleges
+  2.1goto visudo ->add user with root previleges
+  2.2Example:ansible_admin ALL(ALL) NOPASSWD: ALL & save it
+3.Access the slave we need to ssh from master to slave
+ 3.1. goto  cd /etc/sshd.config & change the password_authentication:yes & #Password_authentication:No
+ 3.2. Follow the same process in this location : cd /etc/ssh.config
+4.Next we have to restart the ssh service to make that chnages apply
+  4.1. command for restart:  service restart sshd or systemctl  restart
+  4.2. Follow the same step in the node machine
+5.Next generate a key for  SSH-keygen
+  5.1.Copy that aah key to particular node:
+  5.2.ssh-copy-id user@x.x.x
+  5.3.It will ask first time for the user_name & password
+  5.4.It will ask for the password & for the first time we have to give the password & second time login using ssh x.x.x.x.x
+6.Install Ansible based upon your O.S.
+  6.1. edit that ansible.cfg file
+      6.1.1. command: vi etc/ansible/ansible.cfg
+       6.1.2.Uncomment "Inventory &  host file" & whatever needed for your requirement
+       6.1.3.Edit the hostfile & place all the host IP address in this file ahich you want to control
+7.Install Python & its dependencies for ansible
+
+8.Run your playbook by using:"ansible-playbook yourfile.yml"
+
+
+
