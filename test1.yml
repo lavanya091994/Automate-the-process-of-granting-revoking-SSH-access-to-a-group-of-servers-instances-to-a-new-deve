@@ -1,0 +1,17 @@
+---
+- hosts: webservers
+  become: true
+  remote_user: ansible_admin
+  gather_facts: true
+  tasks:
+  - name: Copy a file
+    copy:
+      src: /home/ansible_admin/demo.py
+      dest: /home/ansible_admin/demo.py
+      owner: ansible_admin
+      group: ansible_admin
+      mode: 0644
+  - name: Execute that file
+    script: /home/ansible_admin/demo.py
+    args:
+      executable: python3 
