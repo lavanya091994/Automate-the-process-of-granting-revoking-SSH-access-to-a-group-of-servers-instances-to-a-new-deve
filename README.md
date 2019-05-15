@@ -11,8 +11,10 @@
 <p>  Next we have to restart the ssh service to make that chnages apply </p> 
   <p>11.1. command for restart:  service restart sshd or systemctl  restart </p>
   <p>11.2. Follow the same step in the node machine.</p>
+  
 ## NOTE: Follow the same step (2-11.2) in the node machine as well.
-<br>  Next generate a key for  SSH-keygen <br> 
+
+<p>  Next generate a key for  SSH-keygen </p> 
   <p> 15.1.Copy that aah key to particular node: </p>
   <p> 15.2.ssh-copy-id user@x.x.x </p>
   <p> 15.3.It will ask first time for the user_name & password </p>
