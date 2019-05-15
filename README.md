@@ -1,4 +1,4 @@
-# Automate-the-process-of-granting-revoking-SSH-access-to-a-group-of-servers-instances-to-a-new-developer.
+Project Name: Automate-the-process-of-granting-revoking-SSH-access-to-a-group-of-servers-instances-to-a-new-developer.
 STEPS:
 Master: 
 generate a user which is common in both master & slave .. Example: ansible_admin
