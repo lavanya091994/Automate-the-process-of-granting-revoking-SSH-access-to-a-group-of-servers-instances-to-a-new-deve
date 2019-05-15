@@ -10,10 +10,9 @@
  <p> 9.2. Follow the same process in this location : cd /etc/ssh.config </p>
 <p>  Next we have to restart the ssh service to make that chnages apply </p> 
   <p>11.1. command for restart:  service restart sshd or systemctl  restart </p>
-  <p>11.2. Follow the same step in the node machine.</p>
+  <p>11.2. Follow the same step in the node machine. </p>
   
-## NOTE: Follow the same step (2-11.2) in the node machine as well.
-
+#### NOTE: Follow the same step (2-11.2) in the node machine as well.
 <p>  Next generate a key for  SSH-keygen </p> 
   <p> 15.1.Copy that aah key to particular node: </p>
   <p> 15.2.ssh-copy-id user@x.x.x </p>
